@@ -41,15 +41,11 @@ snippet cs
 	<%= collection_select <+object+>, <+method+>, <+collection+>, <+value_method+>, <+text_method+><+, <+[options]+>, <+[html_options]+>+> %>
 snippet ct
 	<%= content_tag '${1:DIV}', ${2:content}${3:,options} -%>
-snippet ff
-	<% form_for @${1:model} do |f| -%>
-		${2}
-	<% end -%>
 snippet ffcb
 	<%= ${1:f}.check_box :${2:attribute} %>
 snippet ffe
 	<% error_messages_for :${1:model} -%>
-	
+
 	<% form_for @${2:model} do |f| -%>
 		${3}
 	<% end -%>
@@ -552,11 +548,11 @@ snippet li.
 snippet li+
 	<li>${1}</li>
 	li+${2}
-snippet lia
+snippet liha
 	<li><a href="${2:#}">${1}</a></li>${3}
-snippet lia+
+snippet liha+
 	<li><a href="${2:#}">${1}</a></li>
-	lia+${3}
+	liha+${3}
 snippet link
 	<link rel="${1}" href="${2}" title="${3}" type="${4}" />${5}
 snippet link:atom
@@ -685,10 +681,6 @@ snippet progress
 	<progress>${1}</progress>${2}
 snippet q
 	<q>${1}</q>${2}
-snippet rp
-	<rp>${1}</rp>
-snippet rt
-	<rt>${1}</rt>
 snippet ruby
 	<ruby>
 		<rp><rt>${1}</rt></rp>
@@ -970,7 +962,7 @@ snippet doc_h
 	 * @copyright ${4:$2}, `strftime('%d %B, %Y')`
 	 * @package ${5:default}
 	 */
-	
+
 # Interface
 snippet doc_i
 	/**
@@ -1002,23 +994,23 @@ snippet def
 snippet def?
 	${1}defined('${2}')${3}
 snippet wh
-	while (${1:/* condition */}) 
+	while (${1:/* condition */})
 	{
 		${2:// code...}
 	}
 # do ... while
 snippet do
-	do 
+	do
 	{
 		${2:// code... }
 	} while (${1:/* condition */});
 snippet if
-	if (${1:/* condition */}) 
+	if (${1:/* condition */})
 	{
 		${2:// code...}
 	}
 snippet ife
-	if (${1:/* condition */}) 
+	if (${1:/* condition */})
 	{
 		${2:// code...}
 	} else {
@@ -1026,12 +1018,12 @@ snippet ife
 	}
 	${4}
 snippet else
-	else 
+	else
 	{
 		${1:// code...}
 	}
 snippet elseif
-	elseif (${1:/* condition */}) 
+	elseif (${1:/* condition */})
 	{
 		${2:// code...}
 	}
@@ -1039,7 +1031,7 @@ snippet elseif
 snippet t
 	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
 snippet switch
-	switch ($${1:variable}) 
+	switch ($${1:variable})
 	{
 		case '${2:value}':
 			${3:// code...}
@@ -1053,18 +1045,13 @@ snippet case
 	case '${1:value}':
 		${2:// code...}
 		break;${3}
-snippet for
-	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) 
-	{
-		${4: // code...}
-	}
 snippet foreach
-	foreach ($${1:variable} as $${2:value}) 
+	foreach ($${1:variable} as $${2:value})
 	{
 		${3:// code...}
 	}
 snippet foreachk
-	foreach ($${1:variable} as $${2:key} => $${3:value}) 
+	foreach ($${1:variable} as $${2:key} => $${3:value})
 	{
 		${4:// code...}
 	}
@@ -1077,17 +1064,17 @@ snippet fun
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
 snippet try
-	try 
+	try
 	{
 		${2}
-	} 
-	catch (${1:Exception} $e) 
+	}
+	catch (${1:Exception} $e)
 	{
 
 	}
 # lambda with closure
 snippet lambda
-	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */}) 
+	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */})
 	{
 		${4}
 	};
@@ -1102,8 +1089,8 @@ snippet vd
 snippet vdd
 	var_dump(${1}); die(${2:});
 snippet http_redirect
-	header ("HTTP/1.1 301 Moved Permanently"); 
-	header ("Location: ".URL); 
+	header ("HTTP/1.1 301 Moved Permanently");
+	header ("Location: ".URL);
 	exit();
 # Getters & Setters
 snippet getset
