@@ -453,15 +453,43 @@ snippet html
 		${2}
 	</body>
 	</html>
+snippet html:bs3
+	<html>
+	<head>
+		<meta name="viewport" content="width-device-width, maximum-scale=1.0" />
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/${1:bootstrap}.css">
+		<script type="text/javascript" src="js/${2:bootstrap}.js"></script>
+		<script type="text/javascript" src="js/${3:jquery-2.0.3.min}.js"></script>
+		<title>${4:Title Here}</title>
+	</head>
+	<body>
+		${5}
+	</body>
+	</html>
+snippet html:bs2
+	<html>
+	<head>
+		<meta name="viewport" content="width-device-width, maximum-scale=1.0" />
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/${1:bootstrap}.css">
+		<script type="text/javascript" src="js/${2:bootstrap}.js"></script>
+		<title>${4:Title Here}</title>
+	</head>
+	<body>
+		${5}
+	</body>
+	</html>
 snippet html:xt
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 		<title>${1:Document}</title>
+		${2}
 	</head>
 	<body>
-		${2}	
+		${3}
 	</body>
 	</html>
 snippet html:xs
@@ -472,7 +500,7 @@ snippet html:xs
 		<title>${1:Document}</title>
 	</head>
 	<body>
-		${2}	
+		${2}
 	</body>
 	</html>
 snippet html:5
@@ -593,7 +621,7 @@ snippet link
 snippet link:atom
 	<link rel="alternate" href="${1:atom.xml}" title="Atom" type="application/atom+xml" />${2}
 snippet link:css
-	<link rel="stylesheet" href="${2:style.css}" type="text/css" media="${3:all}" />${4}
+	<link rel="stylesheet" href="${1:style.css}" type="text/css" media="${2:all}" />${3}
 snippet link:favicon
 	<link rel="shortcut icon" href="${1:favicon.ico}" type="image/x-icon" />${2}
 snippet link:rss
@@ -1001,7 +1029,7 @@ snippet doc_h
 	 * @copyright ${4:$2}, `strftime('%d %B, %Y')`
 	 * @package ${5:default}
 	 */
-	
+
 # Interface
 snippet doc_i
 	/**
@@ -1033,23 +1061,23 @@ snippet def
 snippet def?
 	${1}defined('${2}')${3}
 snippet wh
-	while (${1:/* condition */}) 
+	while (${1:/* condition */})
 	{
 		${2:// code...}
 	}
 # do ... while
 snippet do
-	do 
+	do
 	{
 		${2:// code... }
 	} while (${1:/* condition */});
 snippet if
-	if (${1:/* condition */}) 
+	if (${1:/* condition */})
 	{
 		${2:// code...}
 	}
 snippet ife
-	if (${1:/* condition */}) 
+	if (${1:/* condition */})
 	{
 		${2:// code...}
 	} else {
@@ -1057,12 +1085,12 @@ snippet ife
 	}
 	${4}
 snippet else
-	else 
+	else
 	{
 		${1:// code...}
 	}
 snippet elseif
-	elseif (${1:/* condition */}) 
+	elseif (${1:/* condition */})
 	{
 		${2:// code...}
 	}
@@ -1070,7 +1098,7 @@ snippet elseif
 snippet t
 	$${1:retVal} = (${2:condition}) ? ${3:a} : ${4:b};${5}
 snippet switch
-	switch ($${1:variable}) 
+	switch ($${1:variable})
 	{
 		case '${2:value}':
 			${3:// code...}
@@ -1085,17 +1113,17 @@ snippet case
 		${2:// code...}
 		break;${3}
 snippet for
-	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) 
+	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++})
 	{
 		${4: // code...}
 	}
 snippet foreach
-	foreach ($${1:variable} as $${2:value}) 
+	foreach ($${1:variable} as $${2:value})
 	{
 		${3:// code...}
 	}
 snippet foreachk
-	foreach ($${1:variable} as $${2:key} => $${3:value}) 
+	foreach ($${1:variable} as $${2:key} => $${3:value})
 	{
 		${4:// code...}
 	}
@@ -1108,17 +1136,17 @@ snippet fun
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
 snippet try
-	try 
+	try
 	{
 		${2}
-	} 
-	catch (${1:Exception} $e) 
+	}
+	catch (${1:Exception} $e)
 	{
 
 	}
 # lambda with closure
 snippet lambda
-	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */}) 
+	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */})
 	{
 		${4}
 	};
@@ -1133,8 +1161,8 @@ snippet vd
 snippet vdd
 	var_dump(${1}); die(${2:});
 snippet http_redirect
-	header ("HTTP/1.1 301 Moved Permanently"); 
-	header ("Location: ".URL); 
+	header ("HTTP/1.1 301 Moved Permanently");
+	header ("Location: ".URL);
 	exit();
 # Getters & Setters
 snippet getset
