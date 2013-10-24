@@ -445,6 +445,49 @@ snippet hr
 	<hr />${1}
 snippet html
 	<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		${1}
+	</head>
+	<body>
+		${2}
+	</body>
+	</html>
+snippet html:xt
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>${1:Document}</title>
+	</head>
+	<body>
+		${2}	
+	</body>
+	</html>
+snippet html:xs
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>${1:Document}</title>
+	</head>
+	<body>
+		${2}	
+	</body>
+	</html>
+snippet html:5
+	<!doctype html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>${1:Document}</title>
+	</head>
+	<body>
+		${2}
+	</body>
+	</html>
+snippet ht
+	<html>
 	${1}
 	</html>
 snippet xhtml
