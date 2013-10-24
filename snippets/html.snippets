@@ -469,18 +469,44 @@ snippet html:less
 		${7}
 	</body>
 	</html>
+snippet html:bs
+	<!DOCTYPE html>
+	<html>
+	  <head>
+		<title>${1:Bootstrap Template}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Bootstrap -->
+		<link href="css/${2:bootstrap-theme}.css" rel="stylesheet" media="screen" type="text/css">
+		<link href="css/${3:bootstrap}.css" rel="stylesheet" media="screen" type="text/css">
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		${4:<script src="//code.jquery.com/jquery.js"></script>}
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="js/${5:bootstrap.min}.js"></script>
+
+		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		  <script src="../../assets/js/html5shiv.js"></script>
+		  <script src="../../assets/js/respond.min.js"></script>
+		<![endif]-->
+	  </head>
+	  <body>
+		${6:<h1>Hello, world!</h1>}
+	  </body>
+	</html>
 snippet html:bs3
 	<html>
 	<head>
 		<meta name="viewport" content="width-device-width, maximum-scale=1.0" />
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="css/${1:bootstrap}.css">
-		<script type="text/javascript" src="js/${2:jquery-2.0.3.min}.js"></script>
-		<script type="text/javascript" src="js/${3:bootstrap}.js"></script>
-		<title>${4:Title Here}</title>
+		<link rel="stylesheet" type="text/css" href="css/${2:bootstrap-theme}.css">
+		<script type="text/javascript" src="js/${3:jquery-2.0.3.min}.js"></script>
+		<script type="text/javascript" src="js/${4:bootstrap}.js"></script>
+		<title>${5:Title Here}</title>
 	</head>
 	<body>
-		${5}
+		${6}
 	</body>
 	</html>
 snippet html:bs2
